@@ -11,6 +11,9 @@ public class UserAccount {
     }
 
     public void withdraw(int amount) {
+        if(balance == 0) {
+            throw new RuntimeException("You have insufficient funds");
+        }
         balance -=amount;
     }
 

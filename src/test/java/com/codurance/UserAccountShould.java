@@ -25,4 +25,10 @@ public class UserAccountShould {
         userAccount.withdraw(30);
         assertThat(userAccount.getBalance(), is(0));
     }
+
+    @Test(expected = RuntimeException.class) public void
+    throw_exception_if_funds_falls_below_0() {
+        userAccount = new UserAccount();
+        userAccount.withdraw(30);
+    }
 }
