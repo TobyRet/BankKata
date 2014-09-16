@@ -12,9 +12,17 @@ public class UserAccountShould {
     private UserAccount userAccount;
 
     @Test public void
-    deposit_funds_to_an_account() {
+    deposit_funds_into_an_account() {
         userAccount = new UserAccount();
         userAccount.deposit(30);
         assertThat(userAccount.getBalance(), is(30));
+    }
+
+    @Test public void
+    withdraw_funds_from_an_account() {
+        userAccount = new UserAccount();
+        userAccount.deposit(30);
+        userAccount.withdraw(30);
+        assertThat(userAccount.getBalance(), is(0));
     }
 }

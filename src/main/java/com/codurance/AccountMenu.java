@@ -17,7 +17,7 @@ public class AccountMenu {
                 userAccount.deposit(0);
                 break;
             case "withdraw":
-                userAccount.withdraw();
+                userAccount.withdraw(0);
                 break;
             case "transfer":
                 userAccount.transfer();

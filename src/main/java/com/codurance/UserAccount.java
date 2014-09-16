@@ -10,7 +10,8 @@ public class UserAccount {
         balance+=amount;
     }
 
-    public void withdraw() {
+    public void withdraw(int amount) {
+        balance -=amount;
     }
 
     public void transfer() {
