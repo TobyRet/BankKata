@@ -4,7 +4,10 @@ package com.codurance;
  * Created by tobyretallick on 15/09/2014.
  */
 public class UserAccount {
-    public void deposit() {
+    private int balance;
+
+    public void deposit(int amount) {
+        balance+=amount;
     }
 
     public void withdraw() {
@@ -14,5 +17,10 @@ public class UserAccount {
     }
 
     public void printStatement() {
+    }
+
+
+    public int getBalance() {
+        return balance;
     }
 }

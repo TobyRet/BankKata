@@ -14,7 +14,7 @@ public class AccountMenu {
 
         switch (menuItem) {
             case "deposit":
-                userAccount.deposit();
+                userAccount.deposit(0);
                 break;
             case "withdraw":
                 userAccount.withdraw();

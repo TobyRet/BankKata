@@ -23,10 +23,10 @@ public class AccountMenuShould {
         accountMenu = new AccountMenu(mockedUserAccount);
 
         accountMenu.select("deposit");
-        verify(mockedUserAccount).deposit();
+        verify(mockedUserAccount).deposit(0);
 
         accountMenu.select("withdraw");
-        verify(mockedUserAccount).deposit();
+        verify(mockedUserAccount).deposit(0);
 
         accountMenu.select("transfer");
         verify(mockedUserAccount).transfer();
