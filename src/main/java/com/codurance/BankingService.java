@@ -22,4 +22,8 @@ public class BankingService {
         withdraw(amount, customerAccount);
         deposit(amount, destinationAccount);
     }
+
+    public void printStatement(CustomerAccount customerAccount) {
+        customerAccount.printStatement();
+    }
 }

@@ -40,4 +40,10 @@ public class BankingServiceShould {
         verify(customerAccount).withdrawFunds(30);
         verify(destinationAccount).depositFunds(30);
     }
+
+    @Test public void
+    print_bank_balance() {
+        bankingService.printStatement(customerAccount);
+        verify(customerAccount).printStatement();
+    }
 }

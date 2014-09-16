@@ -10,4 +10,7 @@ public class CustomerAccount {
 
     public void withdrawFunds(int i) {
     }
+
+    public void printStatement() {
+    }
 }
