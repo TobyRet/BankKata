@@ -12,10 +12,11 @@ public class CustomerAccount {
     }
 
     public void depositFunds(int amount) {
-        accountHistory.enterTransaction("deposit", amount);
+        accountHistory.enterTransaction("Deposit", amount);
     }
 
     public void withdrawFunds(int amount) {
+        accountHistory.enterTransaction("Withdrawal", amount);
     }
 
     public void printStatement() {
