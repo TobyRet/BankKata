@@ -21,19 +21,26 @@ public class CustomerAccountShould {
 
     @Test
     public void
-    add_deposit_to_account() {
+    add_deposit_to_accountHistory() {
         customerAccount.depositFunds(30);
         verify(accountHistory).enterTransaction("Deposit", 30);
     }
 
     @Test public void
-    deduct_withdrawal_from_balance() {
+    add_withdrawal_to_accountHistory() {
         customerAccount.withdrawFunds(30);
         verify(accountHistory).enterTransaction("Withdrawal", 30);
     }
 
-//    @Test public void
-//    transfer_funds_to_another_account() {
-//
-//    }
+    @Test public void
+    add_transfer_to_accountHistory() {
+        customerAccount.transferFunds(30);
+        verify(accountHistory).enterTransaction("Transfer", 30);
+    }
+
+    @Test public void
+    print_statement() {
+        customerAccount.printStatement();
+        verify(accountHistory).retrieveAllTransactions();
+    }
 }

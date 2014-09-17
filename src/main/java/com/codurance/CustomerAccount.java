@@ -19,6 +19,11 @@ public class CustomerAccount {
         accountHistory.enterTransaction("Withdrawal", amount);
     }
 
+    public void transferFunds(int amount) {
+        accountHistory.enterTransaction("Transfer", amount);
+    }
+
     public void printStatement() {
+        accountHistory.retrieveAllTransactions();
     }
 }

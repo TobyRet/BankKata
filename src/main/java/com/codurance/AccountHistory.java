@@ -7,4 +7,8 @@ public class AccountHistory {
 
     public void enterTransaction(String transactionType, int amount) {
     }
+
+    public void retrieveAllTransactions() {
+
+    }
 }
