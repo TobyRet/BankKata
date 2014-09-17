@@ -1,8 +1,6 @@
 package com.codurance;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -10,41 +8,42 @@ import java.util.List;
  */
 public class AccountHistory {
 
-    private List<Object> statement = new ArrayList<Object>();
+    private List<Object> statement = new ArrayList<>();
     private List<Object> transaction;
-    private Date dateToday;
-    private DateFormat dateFormatter;
     private int balance;
+    private Formatter formatter;
+
+    public AccountHistory(Formatter formatter) {
+        this.formatter = formatter;
+    }
 
     public void enterTransaction(String transactionType, int amount) {
         debitOrCreditAccount(transactionType, amount);
-        transaction = new ArrayList<Object>();
-        transaction.add(createFormattedDateStamp());
+
+        String getDate = formatter.createFormattedDateStamp();
+
+        transaction = new ArrayList<>();
+        transaction.add(getDate);
         transaction.add(amount);
         transaction.add(getBalance());
+
         statement.add(transaction);
     }
 
     private void debitOrCreditAccount(String transactionType, int amount) {
-        if(transactionType == "deposit") {
+        if (transactionType == "deposit") {
             updateBalance(amount);
         } else {
             updateBalance(-amount);
         }
     }
 
-    public List<Object> retrieveAllTransactions() {
-        return statement;
-    }
-
     public List<Object> retrieveTransaction() {
         return transaction;
     }
 
-    public String createFormattedDateStamp() {
-        dateToday = new Date();
-        dateFormatter = DateFormat.getDateInstance(DateFormat.SHORT);
-        return dateFormatter.format(dateToday);
+    public List<Object> retrieveAllTransactions() {
+        return statement;
     }
 
     public void updateBalance(int balance) {
