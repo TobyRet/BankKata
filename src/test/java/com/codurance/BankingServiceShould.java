@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
@@ -16,31 +17,29 @@ public class BankingServiceShould {
     private CustomerAccount customerAccount;
     private CustomerAccount destinationAccount;
     private CustomerAccountDAO customerAccountDAO;
+    private static final int CUSTOMER_ID = 12345;
 
     @Before
     public void initialise() {
         customerAccount = new CustomerAccount();
         customerAccountDAO = mock(CustomerAccountDAO.class);
         bankingService = new BankingService(customerAccountDAO);
+        when(customerAccountDAO.getCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
     }
 
     @Test public void
     should_retrieve_customer_account_before_fulfilling_transaction() {
-        int customerID = 12345;
-        when(customerAccountDAO.getCustomerAccount(customerID)).thenReturn(customerAccount);
-        assertThat(bankingService.retrieveCustomerAccount(customerID), is(customerAccount));
+        assertThat(bankingService.retrieveCustomerAccount(CUSTOMER_ID), is(customerAccount));
     }
 
+    @Test public void
+    deposit_funds_into_an_account() {
+        customerAccount = mock(CustomerAccount.class);
+        when(bankingService.retrieveCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
+        bankingService.deposit(30, CUSTOMER_ID);
+        verify(customerAccount).depositFunds(30);
+    }
 
-
-
-//    @Test public void
-//    deposit_funds_into_an_account() {
-//        bankingService.deposit(30, customerAccount);
-//        verify(customerAccount).depositFunds(30);
-//
-//    }
-//
 //    @Test public void
 //    withdraw_funds_from_an_account() {
 //        bankingService.withdraw(30, customerAccount);

@@ -11,22 +11,22 @@ public class BankingService {
         this.customerAccountDAO = customerAccountDAO;
     }
 
-    public void deposit(int amount, CustomerAccount customerAccount) {
-        customerAccount.depositFunds(amount);
+    public void deposit(int amount, int customerID) {
+        retrieveCustomerAccount(customerID).depositFunds(amount);
     }
 
-    public void withdraw(int amount, CustomerAccount customerAccount) {
-        customerAccount.withdrawFunds(amount);
-    }
+//    public void withdraw(int amount, CustomerAccount customerAccount) {
+//        customerAccount.withdrawFunds(amount);
+//    }
 
-    public void transferFunds(int amount, CustomerAccount customerAccount, CustomerAccount destinationAccount) {
-        withdraw(amount, customerAccount);
-        deposit(amount, destinationAccount);
-    }
-
-    public void printStatement(CustomerAccount customerAccount) {
-        customerAccount.printStatement();
-    }
+//    public void transferFunds(int amount, CustomerAccount customerAccount, CustomerAccount destinationAccount) {
+//        withdraw(amount, customerAccount);
+//        deposit(amount, destinationAccount);
+//    }
+//
+//    public void printStatement(CustomerAccount customerAccount) {
+//        customerAccount.printStatement();
+//    }
 
     public CustomerAccount retrieveCustomerAccount(int customerID) {
         return customerAccountDAO.getCustomerAccount(customerID);
