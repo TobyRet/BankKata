@@ -19,11 +19,11 @@ public class BankingService {
         retrieveCustomerAccount(customerID).withdrawFunds(amount);
     }
 
-//    public void transferFunds(int amount, CustomerAccount customerAccount, CustomerAccount destinationAccount) {
-//        withdraw(amount, customerAccount);
-//        deposit(amount, destinationAccount);
-//    }
-//
+    public void transferFunds(int amount, int fromCustomerID, int toCustomerID) {
+        withdraw(amount, fromCustomerID);
+        deposit(amount, toCustomerID);
+    }
+
 //    public void printStatement(CustomerAccount customerAccount) {
 //        customerAccount.printStatement();
 //    }
