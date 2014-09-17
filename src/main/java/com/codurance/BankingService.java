@@ -24,9 +24,9 @@ public class BankingService {
         deposit(amount, toCustomerID);
     }
 
-//    public void printStatement(CustomerAccount customerAccount) {
-//        customerAccount.printStatement();
-//    }
+    public void printStatement(int customerID) {
+        retrieveCustomerAccount(customerID).printStatement();
+    }
 
     public CustomerAccount retrieveCustomerAccount(int customerID) {
         return customerAccountDAO.getCustomerAccount(customerID);

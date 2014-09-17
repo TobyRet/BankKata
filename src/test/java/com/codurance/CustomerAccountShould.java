@@ -1,26 +1,25 @@
 package com.codurance;
 
-import org.junit.Before;
+import org.junit.Test;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by tobyretallick on 16/09/2014.
  */
 public class CustomerAccountShould {
     private CustomerAccount customerAccount;
-    private BankStatement bankStatement;
+    private AccountHistory accountHistory;
 
-    @Before
-    public void initialise() {
-        customerAccount = new CustomerAccount();
+    @Test
+    public void
+    add_deposit_to_account() {
+        accountHistory = mock(AccountHistory.class);
+        customerAccount = new CustomerAccount(accountHistory);
+        customerAccount.depositFunds(30);
+        verify(accountHistory).enterTransaction("deposit", 30);
     }
-
-//    @Test public void
-//    add_deposit_to_account() {
-//        bankStatement = mock(BankStatement.class);
-//        customerAccount.depositFunds(30);
-//        verify(bankStatement).createTransaction("deposit", 30);
-//        customerAccount.retrieveBalance()
-//    }
 
 //    @Test public void
 //    deduct_withdrawal_from_balance() {

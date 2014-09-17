@@ -54,9 +54,9 @@ public class BankingServiceShould {
         verify(destinationAccount).depositFunds(30);
     }
 
-//    @Test public void
-//    print_bank_balance() {
-//        bankingService.printStatement(customerAccount);
-//        verify(customerAccount).printStatement();
-//    }
+    @Test public void
+    print_statement() {
+        bankingService.printStatement(CUSTOMER_ID);
+        verify(customerAccount).printStatement();
+    }
 }
