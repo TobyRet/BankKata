@@ -50,13 +50,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CustomerAccountShould.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="CustomerAccountShould.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/CustomerAccountShould.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8112981" vertical-offset="0" max-vertical-offset="832">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
                   <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AccountHistoryShould.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/AccountHistoryShould.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="832">
+                  <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#390#391#0" expanded="true" />
+                    <element signature="e#443#444#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -66,10 +80,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="BankingService.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="BankingService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/BankingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.48677886" vertical-offset="0" max-vertical-offset="832">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
                   <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
                   <folding>
                     <element signature="e#223#224#0" expanded="true" />
@@ -104,12 +118,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AccountHistory.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="AccountHistory.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/AccountHistory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
+                <state vertical-scroll-proportion="0.63100964" vertical-offset="0" max-vertical-offset="832">
+                  <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#260#268#0" expanded="true" />
+                    <element signature="e#699#700#0" expanded="true" />
+                    <element signature="e#731#732#0" expanded="true" />
+                    <element signature="e#780#781#0" expanded="true" />
+                    <element signature="e#814#815#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -137,8 +158,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/CustomerTransactions.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/BankingServiceShould.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/CustomerAccountShould.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/AccountHistory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/CustomerAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/AccountHistory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/AccountHistoryShould.java" />
       </list>
     </option>
   </component>
@@ -288,7 +310,7 @@
       <recent name="com.codurance" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerAccountShould">
+  <component name="RunManager" selected="JUnit.AccountHistoryShould">
     <configuration default="false" name="AccountMenuShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankKata" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -361,6 +383,28 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.codurance" />
       <option name="MAIN_CLASS_NAME" value="com.codurance.CustomerAccountShould" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AccountHistoryShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankKata" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.codurance" />
+      <option name="MAIN_CLASS_NAME" value="com.codurance.AccountHistoryShould" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -506,18 +550,20 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AccountMenuShould" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserAccountShould" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerAccountShould" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AccountHistoryShould" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerAccountShould" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserAccountShould" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AccountMenuShould" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AccountHistoryShould" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerAccountShould" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserAccountShould" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AccountMenuShould" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -555,7 +601,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3260188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3260188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -667,14 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/AccountHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/CustomerAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -694,7 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/BankingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48677886" vertical-offset="0" max-vertical-offset="832">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding>
             <element signature="e#223#224#0" expanded="true" />
@@ -722,10 +760,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/CustomerAccountShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8112981" vertical-offset="0" max-vertical-offset="832">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
           <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/AccountHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63100964" vertical-offset="0" max-vertical-offset="832">
+          <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#260#268#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/AccountHistoryShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="832">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
           </folding>
         </state>
       </provider>
