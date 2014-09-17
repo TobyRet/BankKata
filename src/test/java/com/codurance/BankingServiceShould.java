@@ -40,12 +40,14 @@ public class BankingServiceShould {
         verify(customerAccount).depositFunds(30);
     }
 
-//    @Test public void
-//    withdraw_funds_from_an_account() {
-//        bankingService.withdraw(30, customerAccount);
-//        verify(customerAccount).withdrawFunds(30);
-//    }
-//
+    @Test public void
+    withdraw_funds_from_an_account() {
+        customerAccount = mock(CustomerAccount.class);
+        when(bankingService.retrieveCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
+        bankingService.withdraw(30, CUSTOMER_ID);
+        verify(customerAccount).withdrawFunds(30);
+    }
+
 //    @Test public void
 //    transfer_funds_to_another_account() {
 //        destinationAccount = mock(CustomerAccount.class);

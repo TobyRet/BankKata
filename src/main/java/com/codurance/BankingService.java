@@ -15,9 +15,9 @@ public class BankingService {
         retrieveCustomerAccount(customerID).depositFunds(amount);
     }
 
-//    public void withdraw(int amount, CustomerAccount customerAccount) {
-//        customerAccount.withdrawFunds(amount);
-//    }
+    public void withdraw(int amount, int customerID) {
+        retrieveCustomerAccount(customerID).withdrawFunds(amount);
+    }
 
 //    public void transferFunds(int amount, CustomerAccount customerAccount, CustomerAccount destinationAccount) {
 //        withdraw(amount, customerAccount);
