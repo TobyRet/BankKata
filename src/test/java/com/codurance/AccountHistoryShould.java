@@ -3,8 +3,6 @@ package com.codurance;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -12,8 +10,7 @@ import static org.junit.Assert.assertThat;
 public class AccountHistoryShould {
 
     private AccountHistory accountHistory;
-    private List<Object> transaction;
-    
+
     @Before
     public void initialise() {
         accountHistory = new AccountHistory();
@@ -29,5 +26,20 @@ public class AccountHistoryShould {
     @Test public void
     enter_formatted_date_into_transaction_arrayList() {
         assertThat(accountHistory.createFormattedDateStamp(), is("17/09/14"));
+    }
+
+    @Test public void
+    enter_correct_balance_into_transaction_arrayList() {
+        accountHistory.updateBalance(30);
+
+        accountHistory.enterTransaction("deposit", 30);
+        assertThat(accountHistory.getBalance(), is(60));
+
+        accountHistory.enterTransaction("withdraw", 10);
+        assertThat(accountHistory.getBalance(), is(50));
+
+        accountHistory.enterTransaction("transfer", 10);
+        assertThat(accountHistory.getBalance(), is(40));
+
     }
 }

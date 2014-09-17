@@ -14,13 +14,23 @@ public class AccountHistory {
     private List<Object> transaction;
     private Date dateToday;
     private DateFormat dateFormatter;
+    private int balance;
 
     public void enterTransaction(String transactionType, int amount) {
+        debitOrCreditAccount(transactionType, amount);
         transaction = new ArrayList<Object>();
         transaction.add(createFormattedDateStamp());
-        transaction.add(30);
-        transaction.add(30);
+        transaction.add(amount);
+        transaction.add(getBalance());
         statement.add(transaction);
+    }
+
+    private void debitOrCreditAccount(String transactionType, int amount) {
+        if(transactionType == "deposit") {
+            updateBalance(amount);
+        } else {
+            updateBalance(-amount);
+        }
     }
 
     public List<Object> retrieveAllTransactions() {
@@ -35,5 +45,13 @@ public class AccountHistory {
         dateToday = new Date();
         dateFormatter = DateFormat.getDateInstance(DateFormat.SHORT);
         return dateFormatter.format(dateToday);
+    }
+
+    public void updateBalance(int balance) {
+        this.balance += balance;
+    }
+
+    public int getBalance() {
+        return balance;
     }
 }
