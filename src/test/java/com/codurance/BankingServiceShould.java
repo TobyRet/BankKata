@@ -21,10 +21,10 @@ public class BankingServiceShould {
 
     @Before
     public void initialise() {
-        customerAccount = new CustomerAccount();
         customerAccountDAO = mock(CustomerAccountDAO.class);
         bankingService = new BankingService(customerAccountDAO);
-        when(customerAccountDAO.getCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
+        customerAccount = mock(CustomerAccount.class);
+        when(bankingService.retrieveCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
     }
 
     @Test public void
@@ -34,16 +34,12 @@ public class BankingServiceShould {
 
     @Test public void
     deposit_funds_into_an_account() {
-        customerAccount = mock(CustomerAccount.class);
-        when(bankingService.retrieveCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
         bankingService.deposit(30, CUSTOMER_ID);
         verify(customerAccount).depositFunds(30);
     }
 
     @Test public void
     withdraw_funds_from_an_account() {
-        customerAccount = mock(CustomerAccount.class);
-        when(bankingService.retrieveCustomerAccount(CUSTOMER_ID)).thenReturn(customerAccount);
         bankingService.withdraw(30, CUSTOMER_ID);
         verify(customerAccount).withdrawFunds(30);
     }
