@@ -14,4 +14,8 @@ public class BankService {
     public void deposit(Transaction deposit) {
         customerAccount.processTransaction(deposit);
     }
+
+    public void withdraw(Transaction withdraw) {
+        customerAccount.processTransaction(withdraw);
+    }
 }
