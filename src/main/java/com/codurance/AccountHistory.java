@@ -12,6 +12,7 @@ public class AccountHistory {
     private List<Object> transaction;
     private int balance;
     private Formatter formatter;
+    private List<Object> allTransactions;
 
     public AccountHistory(Formatter formatter) {
         this.formatter = formatter;
@@ -54,6 +55,7 @@ public class AccountHistory {
         return balance;
     }
 
-    public void retrieveFormattedStatement() {
+    public List<Object> retrieveFormattedStatement() {
+        return formatter.createFormattedStatement(this.retrieveAllTransactions());
     }
 }

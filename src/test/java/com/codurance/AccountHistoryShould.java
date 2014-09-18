@@ -16,6 +16,7 @@ public class AccountHistoryShould {
 
     private AccountHistory accountHistory;
     private Formatter formatter;
+    private List<Object> allTransactions;
 
     @Before
     public void initialise() {
@@ -68,9 +69,11 @@ public class AccountHistoryShould {
 
 
     @Test public void
-    should_send_all_transactions_to_Formatter() {
+    receive_formatted_statement_from_Formatter() {
         createTransactions();
-        
+        accountHistory.retrieveFormattedStatement();
+        System.out.println(accountHistory.retrieveAllTransactions());
+        verify(formatter).createFormattedStatement(accountHistory.retrieveAllTransactions());
     }
 
     private void createTransactions() {
