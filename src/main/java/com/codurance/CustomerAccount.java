@@ -5,25 +5,25 @@ package com.codurance;
  */
 public class CustomerAccount {
 
-    private AccountHistory accountHistory;
+    private TransactionHistory transactionHistory;
 
-    public CustomerAccount(AccountHistory accountHistory) {
-        this.accountHistory = accountHistory;
+    public CustomerAccount(TransactionHistory transactionHistory) {
+        this.transactionHistory = transactionHistory;
     }
 
     public void depositFunds(int amount) {
-        accountHistory.enterTransaction("Deposit", amount);
+        transactionHistory.enterTransaction("Deposit", amount);
     }
 
     public void withdrawFunds(int amount) {
-        accountHistory.enterTransaction("Withdrawal", amount);
-    }
-
-    public void transferFunds(int amount) {
-        accountHistory.enterTransaction("Transfer", amount);
+        transactionHistory.enterTransaction("Withdraw", -amount);
     }
 
     public void printStatement() {
-        accountHistory.retrieveFormattedStatement();
+        transactionHistory.retrieveFormattedStatement();
+    }
+
+    public void transferFunds(int amount) {
+        transactionHistory.enterTransaction("Transfer", -amount);
     }
 }

@@ -55,7 +55,7 @@ public class AccountHistory {
         return balance;
     }
 
-    public List<Object> retrieveFormattedStatement() {
+    public String retrieveFormattedStatement() {
         return formatter.createFormattedStatement(this.retrieveAllTransactions());
     }
 }

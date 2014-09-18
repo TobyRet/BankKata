@@ -67,7 +67,6 @@ public class AccountHistoryShould {
         assertThat(accountHistory.retrieveAllTransactions().get(1), is(expected));
     }
 
-
     @Test public void
     receive_formatted_statement_from_Formatter() {
         createTransactions();

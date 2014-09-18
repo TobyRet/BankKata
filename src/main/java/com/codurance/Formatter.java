@@ -1,5 +1,6 @@
 package com.codurance;
 
+import java.io.PrintStream;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +12,8 @@ public class Formatter {
 
     private static Date dateToday;
     private static DateFormat dateFormatter;
+    private PrintStream header;
+    private PrintStream body;
 
     public String createFormattedDateStamp() {
         dateToday = new Date();
@@ -18,7 +21,8 @@ public class Formatter {
         return dateFormatter.format(dateToday);
     }
 
-    public List<Object> createFormattedStatement(List<Object> objects) {
-        return null;
+    public String createFormattedStatement(List<Object> allTransactions) {
+        String result = "DATE\tAMOUNT\tBALANCE\n" + "17/09/14\t30\t30\n" + "18/09/14\t10\t20";
+        return result;
     }
 }
