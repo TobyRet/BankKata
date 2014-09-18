@@ -24,6 +24,6 @@ public class CustomerAccount {
     }
 
     public void printStatement() {
-        accountHistory.retrieveAllTransactions();
+        accountHistory.retrieveFormattedStatement();
     }
 }
