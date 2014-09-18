@@ -15,6 +15,7 @@ public class BankServiceShould {
     private static final Transaction WITHDRAW = new Transaction(-30);
     private BankService bankService;
     private CustomerAccount customerAccount;
+    private CustomerAccount destinationAccount;
 
 
    @Before
@@ -24,14 +25,22 @@ public class BankServiceShould {
    }
 
     @Test public void
-    create_deposit_transaction() {
+    deposit_funds_to_customer_account() {
         bankService.deposit(DEPOSIT);
         verify(customerAccount).processTransaction(DEPOSIT);
     }
 
     @Test public void
-    create_withdraw_transaction() {
+    withdraw_funds_from_customer_account() {
         bankService.withdraw(WITHDRAW);
         verify(customerAccount).processTransaction(WITHDRAW);
     }
+
+    @Test public void
+    transfer_funds_to_another_customer_account() {
+        bankService.transfer(WITHDRAW);
+        verify(customerAccount).processTransaction(WITHDRAW);
+    }
+
+
 }
