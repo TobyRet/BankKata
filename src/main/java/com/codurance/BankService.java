@@ -22,4 +22,8 @@ public class BankService {
     public void transfer(Transaction transfer) {
         customerAccount.processTransaction(transfer);
     }
+
+    public void printStatement() {
+        customerAccount.printStatement();
+    }
 }

@@ -5,7 +5,17 @@ package com.codurance;
  */
 public class CustomerAccount {
 
-    public void processTransaction(Transaction deposit) {
+    private final CustomerTransactions customerTransactions;
+
+    public CustomerAccount(CustomerTransactions customerTransactions) {
+        this.customerTransactions = customerTransactions;
+    }
+
+    public void processTransaction(Transaction transaction) {
+        customerTransactions.add(transaction);
+    }
+
+    public void printStatement() {
 
     }
 }

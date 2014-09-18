@@ -42,5 +42,11 @@ public class BankServiceShould {
         verify(customerAccount).processTransaction(WITHDRAW);
     }
 
+    @Test public void
+    print_statement() {
+        bankService.printStatement();
+        verify(customerAccount).printStatement();
+    }
+
 
 }
