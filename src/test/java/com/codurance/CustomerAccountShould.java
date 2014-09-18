@@ -41,6 +41,6 @@ public class CustomerAccountShould {
     @Test public void
     print_statement() {
         customerAccount.printStatement();
-        verify(accountHistory).retrieveAllTransactions();
+        verify(accountHistory).retrieveFormattedStatement();
     }
 }

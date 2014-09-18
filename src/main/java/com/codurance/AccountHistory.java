@@ -38,7 +38,7 @@ public class AccountHistory {
         }
     }
 
-    public List<Object> retrieveTransaction() {
+    public List<Object> retrieveLastTransaction() {
         return transaction;
     }
 
@@ -52,5 +52,8 @@ public class AccountHistory {
 
     public int getBalance() {
         return balance;
+    }
+
+    public void retrieveFormattedStatement() {
     }
 }

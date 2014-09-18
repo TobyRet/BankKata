@@ -50,7 +50,7 @@ public class BankingServiceShould {
         destinationAccount = mock(CustomerAccount.class);
         when(bankingService.retrieveCustomerAccount(DESTINATION_CUSTOMER_ID)).thenReturn(destinationAccount);
         bankingService.transferFunds(30, CUSTOMER_ID, DESTINATION_CUSTOMER_ID);
-        verify(customerAccount).transferFunds(30);
+        verify(customerAccount).withdrawFunds(30);
         verify(destinationAccount).depositFunds(30);
     }
 
