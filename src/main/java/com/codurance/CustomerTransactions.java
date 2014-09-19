@@ -18,7 +18,7 @@ public class CustomerTransactions {
         return allCustomerTransactions;
     }
 
-    public void add(Transaction transactionType) {
-
+    public void add(Transaction transaction) {
+        allCustomerTransactions.add(transaction);
     }
 }
