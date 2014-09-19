@@ -6,11 +6,11 @@ import java.util.List;
 /**
  * Created by tobyretallick on 18/09/2014.
  */
-public class CustomerTransactions {
+public class CustomerTransactionsCollection {
 
     private final List<Transaction> allCustomerTransactions;
 
-    public CustomerTransactions() {
+    public CustomerTransactionsCollection() {
         allCustomerTransactions = new ArrayList<>();
     }
 

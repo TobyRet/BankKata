@@ -5,10 +5,12 @@ package com.codurance;
  */
 public class CustomerAccount {
 
-    private final CustomerTransactions customerTransactions;
+    private CustomerTransactionsCollection customerTransactions;
+    private AccountDisplay accountDisplay;
 
-    public CustomerAccount(CustomerTransactions customerTransactions) {
+    public CustomerAccount(CustomerTransactionsCollection customerTransactions, AccountDisplay accountDisplay) {
         this.customerTransactions = customerTransactions;
+        this.accountDisplay = accountDisplay;
     }
 
     public void processTransaction(Transaction transaction) {
@@ -16,6 +18,6 @@ public class CustomerAccount {
     }
 
     public void printStatement() {
-
+        accountDisplay.printStatementToConsole();
     }
 }
