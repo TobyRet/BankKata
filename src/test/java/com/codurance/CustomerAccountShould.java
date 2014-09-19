@@ -11,31 +11,29 @@ import static org.mockito.Mockito.verify;
  */
 public class CustomerAccountShould {
 
-    private static final Transaction DEPOSIT_£30 = new Transaction(30);
-    private static final Transaction DEPOSIT_£60 = new Transaction(60);
     private CustomerAccount customerAccount;
     private CustomerTransactionsCollection customerTransactions;
-    private AccountDisplay accountDisplay;
+    private Transaction transaction;
+    private ConsoleDisplay consoleDisplay;
 
     @Before
     public void initialise() {
         customerTransactions = mock(CustomerTransactionsCollection.class);
-        accountDisplay = mock(AccountDisplay.class);
-        customerAccount = new CustomerAccount(customerTransactions, accountDisplay);
+        consoleDisplay = mock(ConsoleDisplay.class);
+        transaction = mock(Transaction.class);
+        customerAccount = new CustomerAccount(customerTransactions, consoleDisplay);
     }
 
     @Test public void
     add_transaction_to_customer_transaction_repository() {
-        customerAccount.processTransaction(DEPOSIT_£30);
-        customerAccount.processTransaction(DEPOSIT_£60);
-
-        verify(customerTransactions).add(DEPOSIT_£30);
+        customerAccount.addToTransactionList(transaction);
+        verify(customerTransactions).add(transaction);
     }
 
     @Test public void
     print_statement_to_console() {
         customerAccount.printStatement();
-        verify(accountDisplay).printStatementToConsole();
+        verify(consoleDisplay).printStatement();
     }
 
 }

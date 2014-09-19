@@ -6,18 +6,22 @@ package com.codurance;
 public class CustomerAccount {
 
     private CustomerTransactionsCollection customerTransactions;
-    private AccountDisplay accountDisplay;
+    private ConsoleDisplay consoleDisplay;
 
-    public CustomerAccount(CustomerTransactionsCollection customerTransactions, AccountDisplay accountDisplay) {
+    public CustomerAccount(CustomerTransactionsCollection customerTransactions, ConsoleDisplay consoleDisplay) {
         this.customerTransactions = customerTransactions;
-        this.accountDisplay = accountDisplay;
+        this.consoleDisplay = consoleDisplay;
     }
 
-    public void processTransaction(Transaction transaction) {
+    public void processTransaction(int amount) {
+        addToTransactionList(new Transaction(amount));
+    }
+
+    public void addToTransactionList(Transaction transaction) {
         customerTransactions.add(transaction);
     }
 
     public void printStatement() {
-        accountDisplay.printStatementToConsole();
+        consoleDisplay.printStatement();
     }
 }

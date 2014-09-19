@@ -11,16 +11,16 @@ public class BankService {
         this.customerAccount = customerAccount;
     }
 
-    public void deposit(Transaction deposit) {
-        customerAccount.processTransaction(deposit);
+    public void deposit(int depositAmount) {
+        customerAccount.processTransaction(depositAmount);
     }
 
-    public void withdraw(Transaction withdraw) {
-        customerAccount.processTransaction(withdraw);
+    public void withdraw(int withdrawAmount) {
+        customerAccount.processTransaction(withdrawAmount);
     }
 
-    public void transfer(Transaction transfer) {
-        customerAccount.processTransaction(transfer);
+    public void transfer(int transferAmount) {
+        customerAccount.processTransaction(transferAmount);
     }
 
     public void printStatement() {
