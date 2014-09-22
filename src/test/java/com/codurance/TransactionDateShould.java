@@ -2,8 +2,7 @@ package com.codurance;
 
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class TransactionDateShould {
 
@@ -13,6 +12,6 @@ public class TransactionDateShould {
     format_a_date_object() {
         transactionDate = new TransactionDate();
         transactionDate.getFormattedDate();
-        assertThat(transactionDate.getFormattedDate(), is("21/09/14")); // match regular expression pattern
+        assertTrue(transactionDate.getFormattedDate().matches("[0-9]{2}/[0-9]{2}/[0-9]{2}"));
     }
 }

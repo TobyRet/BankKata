@@ -1,11 +1,14 @@
 package com.codurance;
 
-/**
- * Created by tobyretallick on 21/09/2014.
- */
+import java.text.DateFormat;
+import java.util.Date;
+
 public class TransactionDate {
+    private DateFormat dateFormatter;
+
     public String getFormattedDate() {
-        return "21/09/14";
-        // enter date formatter
+        dateFormatter = DateFormat.getDateInstance(DateFormat.SHORT);
+        Date today = new Date();
+        return dateFormatter.format(today).toString();
     }
 }
