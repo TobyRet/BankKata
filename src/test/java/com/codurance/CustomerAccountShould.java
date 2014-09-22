@@ -1,5 +1,6 @@
 package com.codurance;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.mockito.Matchers.any;
@@ -9,13 +10,23 @@ import static org.mockito.Mockito.verify;
 public class CustomerAccountShould {
 
     private CustomerAccount customerAccount;
-    private CustomerTransactionsRepository customerTransactionsRepository;
+    private CustomerTransactionsRepository customerTransactionsRepository = mock(CustomerTransactionsRepository.class);
+    private StatementPrinter statementPrinter = mock(StatementPrinter.class);
+
+    @Before
+    public void initialise() {
+        customerAccount = new CustomerAccount(customerTransactionsRepository, statementPrinter);
+    }
 
     @Test public void
-    send_transaction_to_CustomerTransactionCollection() {
-        customerTransactionsRepository = mock(CustomerTransactionsRepository.class);
-        customerAccount = new CustomerAccount(customerTransactionsRepository);
+    send_transaction_to_CustomerTransactionRepository() {
         customerAccount.processTransaction(30);
         verify(customerTransactionsRepository).add(any());
+    }
+
+    @Test public void
+    print_statement() {
+        customerAccount.printStatement();
+        verify(statementPrinter).printStatement(customerTransactionsRepository.retrieveAll());
     }
 }

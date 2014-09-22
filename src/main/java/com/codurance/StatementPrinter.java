@@ -17,4 +17,8 @@ public class StatementPrinter {
         String transaction = date + "\t\t" + ("" + amount);
         customerTransactions.add(transaction);
     }
+
+    public void printStatement(List<Transaction> transactions) {
+
+    }
 }
