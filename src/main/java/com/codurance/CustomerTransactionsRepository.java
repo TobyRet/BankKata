@@ -21,4 +21,8 @@ public class CustomerTransactionsRepository {
     public void add(Transaction transaction) {
         allCustomerTransactions.add(transaction);
     }
+
+    public void printStatement() {
+
+    }
 }

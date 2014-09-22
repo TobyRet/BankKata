@@ -2,23 +2,31 @@ package com.codurance;
 
 import java.util.List;
 
-/**
- * Created by tobyretallick on 19/09/2014.
- */
 public class StatementPrinter {
 
-    private List<String> customerTransactions;
 
-    public StatementPrinter(List<String> customerTransactions) {
-        this.customerTransactions = customerTransactions;
+    private TransactionFormatter formattedTransaction;
+    private FormattedTransactions formattedTransactions;
+    private int balance = 0;
+
+    public StatementPrinter(TransactionFormatter formattedTransaction, FormattedTransactions formattedTransactions) {
+        this.formattedTransaction = formattedTransaction;
+        this.formattedTransactions = formattedTransactions;
     }
 
     public void printTransaction(String date, int amount) {
-        String transaction = date + "\t\t" + ("" + amount);
-        customerTransactions.add(transaction);
+        formattedTransaction.addDate(date);
+        formattedTransaction.addAmount("" + amount);
+        formattedTransaction.addBalance("" + (balance += amount));
+        formattedTransaction.addLineBreak();
+
+        formattedTransactions.addNewFormattedTransaction(formattedTransaction);
     }
 
-    public void printStatement(List<Transaction> transactions) {
-
+    public void printStatement(List<Transaction> allCustomerTransactions) {
+        for(Transaction customerTransaction : allCustomerTransactions) {
+            customerTransaction.printTo(this);
+        }
     }
+
 }

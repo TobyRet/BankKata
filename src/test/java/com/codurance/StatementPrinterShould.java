@@ -1,23 +1,50 @@
 package com.codurance;
 
-/**
- * Created by tobyretallick on 19/09/2014.
- */
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 public class StatementPrinterShould {
 
-
-    private static TransactionDate transactionDate;
-    private static final Transaction DEPOSIT_£30 = new Transaction(30);
-    private static final Transaction WITHDRAW_£20 = new Transaction(-20);
-    private static final Transaction TRANSFER_£20 = new Transaction(-10);
+    private static final Transaction DEPOSIT_£20 = new Transaction(20);
+    private static final Transaction WITHDRAW_£10 = new Transaction(-10);
     private StatementPrinter statementPrinter;
-    private CustomerTransactionsRepository customerTransactions;
+    private CustomerTransactionsRepository customerTransactionsRepository;
+    private TransactionFormatter formattedTransaction;
+    private FormattedTransactions formattedTransactions;
 
-//    @Test public void
-//    send_each_transaction_to_Customer_Transactions_Collection() {
-//
-//        statementPrinter.printTransaction("17/09/14", 30);
-//        verify(customerTransactions).add("17/09/14\t\t30");
-//    }
+    @Before
+    public void initialise() {
+        formattedTransaction = mock(TransactionFormatter.class);
+        formattedTransactions = mock(FormattedTransactions.class);
+        statementPrinter = new StatementPrinter(formattedTransaction, formattedTransactions);
+    }
+
+    @Test public void
+    calculate_balance_and_send_transaction_information_to_collection() {
+
+        statementPrinter.printTransaction("21/09/14", 30);
+
+        verify(formattedTransaction).addDate(any());
+        verify(formattedTransaction).addAmount(any());
+        verify(formattedTransaction).addBalance(any());
+        verify(formattedTransaction).addLineBreak();
+
+        verify(formattedTransactions).addNewFormattedTransaction(formattedTransaction);
+    }
+
+    @Test public void
+    print_transactions_and_invoke_Display() {
+
+        customerTransactionsRepository = new CustomerTransactionsRepository();
+        customerTransactionsRepository.add(DEPOSIT_£20);
+        customerTransactionsRepository.add(WITHDRAW_£10);
+
+        statementPrinter.printStatement(customerTransactionsRepository.retrieveAll());
+
+    }
+
 }
