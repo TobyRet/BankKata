@@ -1,27 +1,20 @@
 package com.codurance;
 
-/**
- * Created by tobyretallick on 18/09/2014.
- */
 public class CustomerAccount {
 
-    private CustomerTransactionsCollection customerTransactions;
-    private ConsoleDisplay consoleDisplay;
+    private Transaction transaction;
+    private CustomerTransactionsRepository customerTransactionsRepository;
 
-    public CustomerAccount(CustomerTransactionsCollection customerTransactions, ConsoleDisplay consoleDisplay) {
-        this.customerTransactions = customerTransactions;
-        this.consoleDisplay = consoleDisplay;
+    public CustomerAccount(CustomerTransactionsRepository customerTransactionsRepository) {
+        this.customerTransactionsRepository = customerTransactionsRepository;
     }
 
-    public void processTransaction(int amount) {
-        addToTransactionList(new Transaction(amount));
-    }
-
-    public void addToTransactionList(Transaction transaction) {
-        customerTransactions.add(transaction);
+    public void processTransaction(int transactionAmount) {
+        transaction = new Transaction(transactionAmount);
+        customerTransactionsRepository.add(transaction);
     }
 
     public void printStatement() {
-        consoleDisplay.printStatement();
+
     }
 }

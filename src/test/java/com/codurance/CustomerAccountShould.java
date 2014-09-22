@@ -1,39 +1,21 @@
 package com.codurance;
 
-import org.junit.Before;
 import org.junit.Test;
 
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by tobyretallick on 18/09/2014.
- */
 public class CustomerAccountShould {
 
     private CustomerAccount customerAccount;
-    private CustomerTransactionsCollection customerTransactions;
-    private Transaction transaction;
-    private ConsoleDisplay consoleDisplay;
-
-    @Before
-    public void initialise() {
-        customerTransactions = mock(CustomerTransactionsCollection.class);
-        consoleDisplay = mock(ConsoleDisplay.class);
-        transaction = mock(Transaction.class);
-        customerAccount = new CustomerAccount(customerTransactions, consoleDisplay);
-    }
+    private CustomerTransactionsRepository customerTransactionsRepository;
 
     @Test public void
-    add_transaction_to_customer_transaction_repository() {
-        customerAccount.addToTransactionList(transaction);
-        verify(customerTransactions).add(transaction);
+    send_transaction_to_CustomerTransactionCollection() {
+        customerTransactionsRepository = mock(CustomerTransactionsRepository.class);
+        customerAccount = new CustomerAccount(customerTransactionsRepository);
+        customerAccount.processTransaction(30);
+        verify(customerTransactionsRepository).add(any());
     }
-
-    @Test public void
-    print_statement_to_console() {
-        customerAccount.printStatement();
-        verify(consoleDisplay).printStatement();
-    }
-
 }
