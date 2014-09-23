@@ -21,24 +21,24 @@ public class PrintStatementSteps {
 
     @Before
     public void initialise() {
-        bankService = new BankService();
+        bankService = new BankService(null);
         SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
     }
 
     @Given("^a client makes a deposit of (\\d+) on \"(.*?)\"$")
     public void a_client_makes_a_deposit_of_on(int amount, String dateString) throws Throwable {
         Money money = new Money(amount);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        Date date = sdf.parse(dateString);
-        bankService.deposit(money, date);
+        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
+        //String date = sdf.parse(dateString);
+        bankService.deposit(money, dateString);
     }
 
     @Given("^a deposit of (\\d+) on \"(.*?)\"$")
     public void a_deposit_of_on(int amount, String dateString) throws Throwable {
         Money money = new Money(amount);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        Date date = sdf.parse(dateString);
-        bankService.deposit(money, date);
+        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
+        //Date date = sdf.parse(dateString);
+        bankService.deposit(money, dateString);
     }
 
     @Given("^a withdrawal of (\\d+) on \"(.*?)\"$")
