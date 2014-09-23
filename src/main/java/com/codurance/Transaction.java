@@ -13,4 +13,9 @@ public class Transaction {
         this.date = date;
         this.transactionType = transactionType;
     }
+
+    public void print() {
+        date.printDate();
+        money.printAmount();
+    }
 }
