@@ -21,7 +21,8 @@ public class MoneyShould {
     private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
-    public void setUpStreams() {
+    public void
+    setUpStreams() {
         System.setOut(new PrintStream(outContent));
     }
 
@@ -33,8 +34,14 @@ public class MoneyShould {
         assertEquals("10", outContent.toString());
     }
 
+    @Test(expected = RuntimeException.class) public void
+    throws_exception_if_money_object_created_with_negative_value() {
+        new Money(-10);
+    }
+
     @After
-    public void cleanUpSystems() {
+    public void
+    cleanUpSystems() {
         System.setOut(null);
     }
 

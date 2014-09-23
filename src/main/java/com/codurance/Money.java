@@ -9,6 +9,9 @@ public class Money {
 
 
     public Money(int amount) {
+        if(amount < 0) {
+            throw new RuntimeException("You cannot pass a negative value into Amount constructor");
+        }
         this.amount = amount;
     }
 
