@@ -1,5 +1,7 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.CustomerTransactionsRepository;
+import com.codurance.Transaction;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

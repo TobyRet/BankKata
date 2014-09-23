@@ -1,5 +1,7 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.StatementPrinter;
+import com.codurance.Transaction;
 import org.junit.Test;
 
 import static org.mockito.Mockito.*;

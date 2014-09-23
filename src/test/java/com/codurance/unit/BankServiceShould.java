@@ -1,5 +1,7 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.BankService;
+import com.codurance.CustomerAccount;
 import org.junit.Before;
 import org.junit.Test;
 

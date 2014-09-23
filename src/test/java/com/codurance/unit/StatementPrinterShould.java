@@ -1,5 +1,6 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.*;
 import org.junit.Before;
 import org.junit.Test;
 

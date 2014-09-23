@@ -1,5 +1,6 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.TransactionDate;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

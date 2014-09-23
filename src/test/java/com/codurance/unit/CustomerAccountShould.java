@@ -1,5 +1,8 @@
-package com.codurance;
+package com.codurance.unit;
 
+import com.codurance.CustomerAccount;
+import com.codurance.CustomerTransactionsRepository;
+import com.codurance.StatementPrinter;
 import org.junit.Before;
 import org.junit.Test;
 
