@@ -1,6 +1,7 @@
 package com.codurance.acceptancetests;
 
 import com.codurance.BankService;
+import com.codurance.ConsoleDisplay;
 import com.codurance.Money;
 import cucumber.api.DataTable;
 import cucumber.api.java.Before;
@@ -8,9 +9,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import java.io.Console;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by tobyretallick on 23/09/2014.
@@ -34,25 +33,25 @@ public class PrintStatementSteps {
     }
 
     @Given("^a deposit of (\\d+) on \"(.*?)\"$")
-    public void a_deposit_of_on(int amount, String dateString) throws Throwable {
+    public void a_deposit_of_on(int amount, String date) throws Throwable {
         Money money = new Money(amount);
         //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
         //Date date = sdf.parse(dateString);
-        bankService.deposit(money, dateString);
+        bankService.deposit(money, date);
     }
 
     @Given("^a withdrawal of (\\d+) on \"(.*?)\"$")
-    public void a_withdrawal_of_on(int amount, String dateString) throws Throwable {
+    public void a_withdrawal_of_on(int amount, String date) throws Throwable {
         Money money = new Money(amount);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        Date date = sdf.parse(dateString);
+        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
+        //Date date = sdf.parse(dateString);
         bankService.withdraw(money, date);
     }
 
     @When("^she prints her bank statement$")
     public void she_prints_her_bank_statement() throws Throwable {
-        Console console = System.console();
-        bankService.printStatement(console);
+        ConsoleDisplay consoleDisplay = new ConsoleDisplay();
+        bankService.printStatement(consoleDisplay);
     }
 
     @Then("^she would see$")
