@@ -5,5 +5,5 @@ package com.codurance;
  */
 public enum TransactionType {
     DEPOSIT,
-    WITHDRAWAL, transactionType, transactionType,
+    WITHDRAWAL;
 }

@@ -9,7 +9,14 @@ import java.util.Date;
 public class TransactionDate {
     public String create() {
         SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-mm-yyyy");
-        Date transactionDate = new Date();
-        return DATE_FORMAT.format(transactionDate);
+        return DATE_FORMAT.format(getDate());
+    }
+
+    private Date getDate() {
+        return new Date();
+    }
+
+    public void printDate() {
+        System.out.print(create());
     }
 }
