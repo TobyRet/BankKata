@@ -4,6 +4,7 @@ import com.codurance.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -13,28 +14,30 @@ import static org.mockito.Mockito.verify;
 public class BankingServiceShould {
 
     private static final Money DEPOSIT_£20 = new Money(20);
-    private static final String TRANSACTION_DATE = new TransactionDate().create();
+    private static final TransactionDate TRANSACTION_DATE = new TransactionDate();
     private static final Money WITHDRAW_£10 = new Money(10);
     private BankService bankService;
-    private TransactionRepository transactionRepository;
+    private Transaction transaction;
     private ConsoleDisplay consoleDisplay;
+    private TransactionsRepository transactionsRepository;
 
     @Before
     public void initialise() {
-        transactionRepository = mock(TransactionRepository.class);
-        bankService = new BankService(transactionRepository);
+        transaction = mock(Transaction.class);
+        transactionsRepository = mock(TransactionsRepository.class);
+        bankService = new BankService(transactionsRepository);
     }
 
     @Test public void
     should_deposit_funds() {
         bankService.deposit(DEPOSIT_£20, TRANSACTION_DATE);
-        verify(transactionRepository).store(DEPOSIT_£20, TRANSACTION_DATE);
+        verify(transactionsRepository).store(any());
     }
 
     @Test public void
     should_withdraw_funds() {
         bankService.withdraw(WITHDRAW_£10, TRANSACTION_DATE);
-        verify(transactionRepository).store(WITHDRAW_£10, TRANSACTION_DATE);
+        verify(transactionsRepository).store(any());
     }
 
     @Test public void

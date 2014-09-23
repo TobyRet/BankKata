@@ -3,6 +3,7 @@ package com.codurance.acceptancetests;
 import com.codurance.BankService;
 import com.codurance.ConsoleDisplay;
 import com.codurance.Money;
+import com.codurance.TransactionDate;
 import cucumber.api.DataTable;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -25,15 +26,15 @@ public class PrintStatementSteps {
     }
 
     @Given("^a client makes a deposit of (\\d+) on \"(.*?)\"$")
-    public void a_client_makes_a_deposit_of_on(int amount, String dateString) throws Throwable {
+    public void a_client_makes_a_deposit_of_on(int amount, TransactionDate date) throws Throwable {
         Money money = new Money(amount);
         //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
         //String date = sdf.parse(dateString);
-        bankService.deposit(money, dateString);
+        bankService.deposit(money, date);
     }
 
     @Given("^a deposit of (\\d+) on \"(.*?)\"$")
-    public void a_deposit_of_on(int amount, String date) throws Throwable {
+    public void a_deposit_of_on(int amount, TransactionDate date) throws Throwable {
         Money money = new Money(amount);
         //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
         //Date date = sdf.parse(dateString);
@@ -41,7 +42,7 @@ public class PrintStatementSteps {
     }
 
     @Given("^a withdrawal of (\\d+) on \"(.*?)\"$")
-    public void a_withdrawal_of_on(int amount, String date) throws Throwable {
+    public void a_withdrawal_of_on(int amount, TransactionDate date) throws Throwable {
         Money money = new Money(amount);
         //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
         //Date date = sdf.parse(dateString);
