@@ -14,7 +14,6 @@ public class DepositTransaction implements Transaction {
 
     @Override
     public void print(StatementPrinter statementPrinter) {
-        transactionDate.printValue();
-        money.printValue();
+        statementPrinter.printStatement(transactionDate, money);
     }
 }

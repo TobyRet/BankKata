@@ -16,11 +16,7 @@ public class Money {
     }
 
     public void printValue() {
-        System.out.print(getAmount());
-    }
-
-    public int getAmount() {
-        return amount;
+        System.out.print(amount);
     }
 
 }
