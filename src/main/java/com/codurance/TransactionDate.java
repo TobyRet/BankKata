@@ -3,9 +3,6 @@ package com.codurance;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Created by tobyretallick on 23/09/2014.
- */
 public class TransactionDate {
     private final LocalDate date;
 

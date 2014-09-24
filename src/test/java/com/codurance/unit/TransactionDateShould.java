@@ -7,9 +7,6 @@ import static java.time.LocalDate.of;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * Created by tobyretallick on 23/09/2014.
- */
 public class TransactionDateShould {
 
     @Test public void

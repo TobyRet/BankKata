@@ -38,6 +38,12 @@ public class StatementPrinterShould {
     print_a_transaction_date_and_amount_in_the_statement_line() {
         statementPrinter.printStatementLine(DATE_24_09_2014, TEN_POUNDS);
 
-        verify(console).println("24/09/2014 10.00     \n");
+        verify(console).println("24/09/2014  10.00       10.00      \n");
+
+        Money deductFivePounds = new Money(5);
+        deductFivePounds.isWithdrawal();
+        statementPrinter.printStatementLine(DATE_24_09_2014, deductFivePounds);
+
+        verify(console).println("24/09/2014  -5.00       5.00       \n");
     }
 }

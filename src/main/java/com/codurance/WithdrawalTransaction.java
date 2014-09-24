@@ -10,6 +10,7 @@ public class WithdrawalTransaction implements Transaction {
     public WithdrawalTransaction(Money money, TransactionDate transactionDate) {
         this.money = money;
         this.transactionDate = transactionDate;
+        money.isWithdrawal();
     }
 
     @Override

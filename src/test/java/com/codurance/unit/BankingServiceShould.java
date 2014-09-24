@@ -9,9 +9,6 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by tobyretallick on 23/09/2014.
- */
 public class BankingServiceShould {
 
     private static final Money DEPOSIT_£20 = new Money(20);

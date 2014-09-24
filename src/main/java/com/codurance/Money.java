@@ -7,8 +7,7 @@ import java.text.DecimalFormat;
  */
 public class Money {
 
-    private final int amount;
-
+    private int amount;
 
     public Money(int amount) {
         if(amount < 0) {
@@ -17,17 +16,13 @@ public class Money {
         this.amount = amount;
     }
 
-//    public void printValue(StatementPrinter statementPrinter) {
-//        statementPrinter.printAmount(amountAsString(amount));
-//    }
-
-//    private String amountAsString(int amount) {
-//        return "" + amount;
-//    }
-
     @Override
     public String toString() {
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
         return decimalFormat.format(amount);
+    }
+
+    public void isWithdrawal() {
+        amount = -amount;
     }
 }

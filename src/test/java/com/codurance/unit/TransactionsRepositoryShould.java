@@ -6,9 +6,6 @@ import org.junit.Test;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by tobyretallick on 23/09/2014.
- */
 public class TransactionsRepositoryShould {
 
     private TransactionsRepository transactionsRepository;
