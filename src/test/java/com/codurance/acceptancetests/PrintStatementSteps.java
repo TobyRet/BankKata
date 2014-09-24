@@ -21,7 +21,7 @@ public class PrintStatementSteps {
     @Before
     public void initialise() {
         bankService = new BankService(null, null);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     }
 
     @Given("^a client makes a deposit of (\\d+) on \"(.*?)\"$")

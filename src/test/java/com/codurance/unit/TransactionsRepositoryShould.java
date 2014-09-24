@@ -28,6 +28,7 @@ public class TransactionsRepositoryShould {
         transactionsRepository.store(withdrawalTransaction);
 
         transactionsRepository.printTransactions(statementPrinter);
+        verify(statementPrinter).printColumnHeaders();
         verify(depositTransaction).print(statementPrinter);
         verify(withdrawalTransaction).print(statementPrinter);
     }

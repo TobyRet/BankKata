@@ -1,14 +1,11 @@
 package com.codurance.unit;
 
 import com.codurance.Money;
-import org.junit.After;
-import org.junit.Before;
+import com.codurance.StatementPrinter;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 
 /**
@@ -18,31 +15,24 @@ public class MoneyShould {
 
     private static final int £10 = 10;
     private Money money;
-    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private StatementPrinter statementPrinter;
 
-    @Before
-    public void
-    setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-    }
-
-    @Test
-    public void
-    print_amount_to_console() {
-        money = new Money(£10);
-        money.printValue();
-        assertEquals("10", outContent.toString());
-    }
+//    @Test
+//    public void
+//    print_amount_to_console() {
+//        money = new Money(£10);
+//        statementPrinter = mock(StatementPrinter.class);
+//        money.printValue(statementPrinter);
+//    }
 
     @Test(expected = RuntimeException.class) public void
     throws_exception_if_money_object_created_with_negative_value() {
         new Money(-10);
     }
 
-    @After
-    public void
-    cleanUpSystems() {
-        System.setOut(null);
+    @Test public void
+    display_itself_with_two_decimal_places() {
+        assertThat(new Money(10).toString(), is("10.00"));
     }
 
 }

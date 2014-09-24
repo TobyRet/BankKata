@@ -3,6 +3,7 @@ package com.codurance.unit;
 import com.codurance.*;
 import org.junit.Test;
 
+import static java.time.LocalDate.now;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -12,7 +13,7 @@ import static org.mockito.Mockito.verify;
  */
 public class WithdrawalTransactionShould {
     private static final Money £10 = new Money(10);
-    private static final TransactionDate DATE = new TransactionDate();
+    private static final TransactionDate DATE = new TransactionDate(now());
     private Transaction withdrawalTransaction;
     private StatementPrinter statementPrinter;
 
@@ -22,6 +23,6 @@ public class WithdrawalTransactionShould {
         withdrawalTransaction = new WithdrawalTransaction(£10, DATE);
         statementPrinter = mock(StatementPrinter.class);
         withdrawalTransaction.print(statementPrinter);
-        verify(statementPrinter).printStatement(any(), any());
+        verify(statementPrinter).printStatementLine(any(), any());
     }
 }

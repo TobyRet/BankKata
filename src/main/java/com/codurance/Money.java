@@ -1,5 +1,7 @@
 package com.codurance;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by tobyretallick on 23/09/2014.
  */
@@ -15,8 +17,17 @@ public class Money {
         this.amount = amount;
     }
 
-    public void printValue() {
-        System.out.print(amount);
-    }
+//    public void printValue(StatementPrinter statementPrinter) {
+//        statementPrinter.printAmount(amountAsString(amount));
+//    }
 
+//    private String amountAsString(int amount) {
+//        return "" + amount;
+//    }
+
+    @Override
+    public String toString() {
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
+        return decimalFormat.format(amount);
+    }
 }

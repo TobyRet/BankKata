@@ -1,45 +1,43 @@
 package com.codurance.unit;
 
+import com.codurance.Console;
+import com.codurance.Money;
 import com.codurance.StatementPrinter;
-import org.hamcrest.CoreMatchers;
-import org.junit.After;
+import com.codurance.TransactionDate;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import static java.time.LocalDate.of;
+import static org.mockito.Mockito.verify;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
-/**
- * Created by tobyretallick on 24/09/2014.
- */
+@RunWith(MockitoJUnitRunner.class)
 public class StatementPrinterShould {
 
+    private static final TransactionDate DATE_24_09_2014 = new TransactionDate(of(2014, 9, 24));
+    private static final Money TEN_POUNDS = new Money(10);
     private StatementPrinter statementPrinter;
-    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    @Mock Console console;
 
     @Before
     public void
-    setUpStreams() {
-        System.setOut(new PrintStream(outContent));
+    initialize() {
+        statementPrinter = new StatementPrinter(console);
     }
 
     @Test public void
     print_statement_column_headings() {
-        statementPrinter = new StatementPrinter();
         statementPrinter.printColumnHeaders();
-        assertThat(outContent.toString(), CoreMatchers.allOf(
-                containsString("Date"),
-                containsString("Debit"),
-                containsString("Credit"),
-                containsString("Balance")));
+
+        verify(console).println("DATE       AMOUNT     BALANCE   \n");
     }
 
-    @After
-    public void
-    cleanUpSystems() {
-        System.setOut(null);
+    @Test public void
+    print_a_transaction_date_and_amount_in_the_statement_line() {
+        statementPrinter.printStatementLine(DATE_24_09_2014, TEN_POUNDS);
+
+        verify(console).println("24/09/2014 10.00     \n");
     }
 }

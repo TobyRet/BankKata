@@ -15,6 +15,7 @@ public class TransactionsRepository {
     }
 
     public void printTransactions(StatementPrinter statementPrinter) {
+        statementPrinter.printColumnHeaders();
         for (Transaction transaction : transactions) {
             transaction.print(statementPrinter);
         }

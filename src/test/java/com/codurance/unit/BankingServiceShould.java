@@ -4,6 +4,7 @@ import com.codurance.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.time.LocalDate.now;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -14,7 +15,7 @@ import static org.mockito.Mockito.verify;
 public class BankingServiceShould {
 
     private static final Money DEPOSIT_£20 = new Money(20);
-    private static final TransactionDate TRANSACTION_DATE = new TransactionDate();
+    private static final TransactionDate TRANSACTION_DATE = new TransactionDate(now());
     private static final Money WITHDRAW_£10 = new Money(10);
     private BankService bankService;
     private TransactionsRepository transactionsRepository;
