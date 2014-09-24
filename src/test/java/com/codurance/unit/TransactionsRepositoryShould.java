@@ -1,27 +1,34 @@
 package com.codurance.unit;
 
-import com.codurance.Money;
-import com.codurance.Transaction;
-import com.codurance.TransactionDate;
-import com.codurance.TransactionsRepository;
+import com.codurance.*;
+import org.junit.Test;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by tobyretallick on 23/09/2014.
  */
 public class TransactionsRepositoryShould {
 
-    private static final int £10 = 10;
     private TransactionsRepository transactionsRepository;
-    private Transaction transaction;
-    private Money money;
-    private TransactionDate date;
+    private Transaction depositTransaction;
+    private Transaction withdrawalTransaction;
+    private StatementPrinter statementPrinter;
 
-//    @Test public void
-//    store_transactions_in_collection() {
-//        transactionsRepository = new TransactionsRepository();
-//        money = new Money(£10);
-//        date = new TransactionDate();
-//        transaction = new Transaction(money, date);
-//
-//    }
+    @Test
+    public void
+    print_transactions() {
+        transactionsRepository = new TransactionsRepository();
+        depositTransaction = mock(DepositTransaction.class);
+        withdrawalTransaction = mock(WithdrawalTransaction.class);
+        statementPrinter = mock(StatementPrinter.class);
+
+        transactionsRepository.store(depositTransaction);
+        transactionsRepository.store(withdrawalTransaction);
+
+        transactionsRepository.printTransactions(statementPrinter);
+        verify(depositTransaction).print(statementPrinter);
+        verify(withdrawalTransaction).print(statementPrinter);
+    }
 }

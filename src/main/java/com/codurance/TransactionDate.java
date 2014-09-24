@@ -16,7 +16,7 @@ public class TransactionDate {
         return new Date();
     }
 
-    public void printDate() {
+    public void printValue() {
         System.out.print(create());
     }
 }

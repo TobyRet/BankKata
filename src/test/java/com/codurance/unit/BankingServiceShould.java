@@ -17,33 +17,35 @@ public class BankingServiceShould {
     private static final TransactionDate TRANSACTION_DATE = new TransactionDate();
     private static final Money WITHDRAW_£10 = new Money(10);
     private BankService bankService;
-    private Transaction transaction;
-    private ConsoleDisplay consoleDisplay;
     private TransactionsRepository transactionsRepository;
+    private StatementPrinter statementPrinter;
+    private Transaction depositTransaction;
+    private Transaction withdrawalTransaction;
 
     @Before
     public void initialise() {
-        transaction = mock(Transaction.class);
         transactionsRepository = mock(TransactionsRepository.class);
-        bankService = new BankService(transactionsRepository);
+        statementPrinter = mock(StatementPrinter.class);
+        bankService = new BankService(transactionsRepository, statementPrinter);
     }
 
     @Test public void
     should_deposit_funds() {
+        depositTransaction = mock(DepositTransaction.class);
         bankService.deposit(DEPOSIT_£20, TRANSACTION_DATE);
         verify(transactionsRepository).store(any());
     }
 
     @Test public void
     should_withdraw_funds() {
+        withdrawalTransaction = mock(WithdrawalTransaction.class);
         bankService.withdraw(WITHDRAW_£10, TRANSACTION_DATE);
         verify(transactionsRepository).store(any());
     }
 
     @Test public void
     should_print_statement_to_console() {
-        consoleDisplay = mock(ConsoleDisplay.class);
-        bankService.printStatement(consoleDisplay);
-        verify(consoleDisplay).displayStatement();
+        bankService.printStatement();
+        verify(transactionsRepository).printTransactions(statementPrinter);
     }
 }

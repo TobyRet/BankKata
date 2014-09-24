@@ -30,7 +30,7 @@ public class MoneyShould {
     public void
     print_amount_to_console() {
         money = new Money(£10);
-        money.printAmount();
+        money.printValue();
         assertEquals("10", outContent.toString());
     }
 

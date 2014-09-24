@@ -1,7 +1,6 @@
 package com.codurance.acceptancetests;
 
 import com.codurance.BankService;
-import com.codurance.ConsoleDisplay;
 import com.codurance.Money;
 import com.codurance.TransactionDate;
 import cucumber.api.DataTable;
@@ -21,7 +20,7 @@ public class PrintStatementSteps {
 
     @Before
     public void initialise() {
-        bankService = new BankService(null);
+        bankService = new BankService(null, null);
         SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
     }
 
@@ -51,8 +50,7 @@ public class PrintStatementSteps {
 
     @When("^she prints her bank statement$")
     public void she_prints_her_bank_statement() throws Throwable {
-        ConsoleDisplay consoleDisplay = new ConsoleDisplay();
-        bankService.printStatement(consoleDisplay);
+        bankService.printStatement();
     }
 
     @Then("^she would see$")

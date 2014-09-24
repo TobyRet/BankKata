@@ -6,20 +6,22 @@ package com.codurance;
 public class BankService {
 
     private TransactionsRepository transactionsRepository;
+    private StatementPrinter statementPrinter;
 
-    public BankService(TransactionsRepository transactionsRepository) {
+    public BankService(TransactionsRepository transactionsRepository, StatementPrinter statementPrinter) {
         this.transactionsRepository = transactionsRepository;
+        this.statementPrinter = statementPrinter;
     }
 
     public void deposit(Money money, TransactionDate date) {
-        transactionsRepository.store(new Transaction(money, date, TransactionType.DEPOSIT));
+        transactionsRepository.store(new DepositTransaction(money, date));
     }
 
     public void withdraw(Money money, TransactionDate date) {
-        transactionsRepository.store(new Transaction(money, date, TransactionType.WITHDRAWAL));
+        transactionsRepository.store(new WithdrawalTransaction(money, date));
     }
 
-    public void printStatement(ConsoleDisplay consoleDisplay) {
-        consoleDisplay.displayStatement();
+    public void printStatement() {
+        transactionsRepository.printTransactions(statementPrinter);
     }
 }

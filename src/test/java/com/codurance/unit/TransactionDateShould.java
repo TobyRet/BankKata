@@ -33,7 +33,7 @@ public class TransactionDateShould {
     @Test public void
     print_date_to_console() {
         transactionDate = new TransactionDate();
-        transactionDate.printDate();
+        transactionDate.printValue();
         assertTrue(outContent.toString().matches("[0-9]{2}-[0-9]{2}-[0-9]{4}"));
     }
 

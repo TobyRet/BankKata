@@ -15,7 +15,7 @@ public class Money {
         this.amount = amount;
     }
 
-    public void printAmount() {
+    public void printValue() {
         System.out.print(getAmount());
     }
 

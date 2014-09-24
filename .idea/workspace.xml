@@ -22,97 +22,17 @@
     <favorites_list name="BankKata" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47117203">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="BankingServiceShould.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/BankingServiceShould.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-                  <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TransactionsRepositoryShould.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="TransactionsRepositoryShould.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionsRepositoryShould.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-                  <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5925926" vertical-offset="0" max-vertical-offset="810">
+                  <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TransactionDateShould.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionDateShould.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#509#510#0" expanded="true" />
-                    <element signature="e#567#568#0" expanded="true" />
-                    <element signature="e#1042#1043#0" expanded="true" />
-                    <element signature="e#1077#1078#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TransactionShould.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionShould.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3919598" vertical-offset="0" max-vertical-offset="995">
-                  <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MoneyShould.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/MoneyShould.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-                  <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="74" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#511#512#0" expanded="true" />
-                    <element signature="e#569#570#0" expanded="true" />
-                    <element signature="e#873#874#0" expanded="true" />
-                    <element signature="e#903#904#0" expanded="true" />
-                    <element signature="e#954#955#0" expanded="true" />
-                    <element signature="e#989#990#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PrintStatementSteps.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/acceptancetests/PrintStatementSteps.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1095">
-                  <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConsoleDisplay.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/ConsoleDisplay.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-                  <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -124,47 +44,25 @@
           <file leaf-file-name="BankService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/BankService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+                  <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding>
-                    <element signature="e#692#693#0" expanded="true" />
-                    <element signature="e#741#742#0" expanded="true" />
+                    <element signature="e#759#760#0" expanded="true" />
+                    <element signature="e#833#834#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TransactionType.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionType.java">
+          <file leaf-file-name="TransactionsRepository.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionsRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Transaction.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/Transaction.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.26522595" vertical-offset="0" max-vertical-offset="1018">
-                  <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TransactionDate.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionDate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="810">
+                  <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#349#350#0" expanded="true" />
-                    <element signature="e#382#383#0" expanded="true" />
-                    <element signature="e#413#414#0" expanded="true" />
-                    <element signature="e#455#456#0" expanded="true" />
+                    <element signature="e#278#279#0" expanded="true" />
+                    <element signature="e#323#324#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -182,11 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/CustomerTransactionsShould.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/CustomerTransactionLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/AccountDisplay.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/BankServiceShould.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/AccountDisplayShould.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/ConsoleDisplayShould.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/StatementGeneratorShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/StatementGenerator.java" />
@@ -218,21 +111,26 @@
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/BankService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/TransactionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/ConsoleDisplay.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/StatementPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/StandardOutputStreamLog.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/MoneyShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/Money.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/TransactionsRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/acceptancetests/PrintStatementSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionsRepositoryShould.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/TransactionsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codurance/BankService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/BankingServiceShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/TransactionDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/TransactionType.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionDateShould.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/StatementPrinter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/acceptancetests/PrintStatementSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionShould.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/WithdrawalTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/BankService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codurance/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/DepositTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/DepositTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/WithdrawalTransaction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/BankingServiceShould.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codurance/TransactionsRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionsRepositoryShould.java" />
       </list>
     </option>
   </component>
@@ -614,47 +512,21 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="FullScreen" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/codurance" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.codurance" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.codurance.acceptancetests" />
       <recent name="com.codurance" />
+      <recent name="com.codurance.acceptancetests" />
       <recent name="com.codurance.acceptancetests.steps" />
       <recent name="acceptance" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TransactionShould">
-    <configuration default="false" name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankKata" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.codurance" />
-      <option name="MAIN_CLASS_NAME" value="com.codurance.RunCucumberTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.TransactionsRepositoryShould">
     <configuration default="false" name="BankingServiceShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankKata" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -727,6 +599,28 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.codurance.unit" />
       <option name="MAIN_CLASS_NAME" value="com.codurance.unit.TransactionShould" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TransactionsRepositoryShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankKata" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.codurance.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.codurance.unit.TransactionsRepositoryShould" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -873,19 +767,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RunCucumberTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TransactionDateShould" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MoneyShould" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionShould" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TransactionDateShould" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MoneyShould" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TransactionShould" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionsRepositoryShould" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TransactionShould" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TransactionDateShould" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MoneyShould" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RunCucumberTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TransactionsRepositoryShould" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BankingServiceShould" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TransactionShould" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TransactionDateShould" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MoneyShould" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -924,7 +818,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18025078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3432602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1088,98 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/Money.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25049117" vertical-offset="0" max-vertical-offset="1018">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/ConsoleDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/acceptancetests/PrintStatementSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1095">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionsRepositoryShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17681728" vertical-offset="0" max-vertical-offset="1018">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/BankService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/BankingServiceShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/MoneyShould.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
@@ -1188,43 +990,134 @@
             <element signature="imports" expanded="true" />
             <element signature="e#511#512#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionDateShould.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.13261297" vertical-offset="0" max-vertical-offset="1018">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionShould.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/StatementPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3919598" vertical-offset="0" max-vertical-offset="995">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.091649696" vertical-offset="0" max-vertical-offset="982">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/acceptancetests/PrintStatementSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1065">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26522595" vertical-offset="0" max-vertical-offset="1018">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.12060302" vertical-offset="0" max-vertical-offset="995">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/Money.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/DepositTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/BankService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionDateShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/BankingServiceShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/WithdrawalTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29469547" vertical-offset="0" max-vertical-offset="1018">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codurance/TransactionsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="810">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codurance/unit/TransactionsRepositoryShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5925926" vertical-offset="0" max-vertical-offset="810">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
