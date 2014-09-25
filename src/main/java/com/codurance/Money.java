@@ -20,6 +20,14 @@ public class Money {
     }
 
     public void isWithdrawal() {
+        negateAmount();
+    }
+
+    public void isTransfer() {
+        negateAmount();
+    }
+
+    private void negateAmount() {
         amount = -amount;
     }
 }

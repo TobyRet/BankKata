@@ -21,4 +21,8 @@ public class BankService {
     public void printStatement() {
         transactionsRepository.printTransactions(statementPrinter);
     }
+
+    public void transfer(Money money, TransactionDate date) {
+        transactionsRepository.store(new TransferTransaction(money, date));
+    }
 }

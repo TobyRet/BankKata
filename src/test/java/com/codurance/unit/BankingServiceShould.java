@@ -17,11 +17,10 @@ public class BankingServiceShould {
     private static final Money DEPOSIT_£20 = new Money(20);
     private static final TransactionDate TRANSACTION_DATE = new TransactionDate(now());
     private static final Money WITHDRAW_£10 = new Money(10);
+    private static final Money TRANSFER_£10 = new Money(10);
     private BankService bankService;
     @Mock StatementPrinter statementPrinter;
     @Mock TransactionsRepository transactionsRepository;
-    @Mock Transaction depositTransaction;
-    @Mock Transaction withdrawalTransaction;
 
     @Before
     public void initialise() {
@@ -38,6 +37,12 @@ public class BankingServiceShould {
     should_withdraw_funds() {
         bankService.withdraw(WITHDRAW_£10, TRANSACTION_DATE);
         verify(transactionsRepository).store(any(WithdrawalTransaction.class));
+    }
+    
+    @Test public void
+    should_transfer_funds() {
+        bankService.transfer(TRANSFER_£10, TRANSACTION_DATE);
+        verify(transactionsRepository).store(any(TransferTransaction.class));
     }
 
     @Test public void
