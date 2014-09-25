@@ -2,9 +2,6 @@ package com.codurance;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by tobyretallick on 23/09/2014.
- */
 public class Money {
 
     private int amount;

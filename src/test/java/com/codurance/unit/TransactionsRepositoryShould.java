@@ -1,25 +1,27 @@
 package com.codurance.unit;
 
-import com.codurance.*;
+import com.codurance.StatementPrinter;
+import com.codurance.Transaction;
+import com.codurance.TransactionsRepository;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
+@RunWith(MockitoJUnitRunner.class)
 public class TransactionsRepositoryShould {
 
     private TransactionsRepository transactionsRepository;
-    private Transaction depositTransaction;
-    private Transaction withdrawalTransaction;
-    private StatementPrinter statementPrinter;
+    @Mock StatementPrinter statementPrinter;
+    @Mock Transaction withdrawalTransaction;
+    @Mock Transaction depositTransaction;
 
     @Test
     public void
     print_transactions() {
         transactionsRepository = new TransactionsRepository();
-        depositTransaction = mock(DepositTransaction.class);
-        withdrawalTransaction = mock(WithdrawalTransaction.class);
-        statementPrinter = mock(StatementPrinter.class);
 
         transactionsRepository.store(depositTransaction);
         transactionsRepository.store(withdrawalTransaction);

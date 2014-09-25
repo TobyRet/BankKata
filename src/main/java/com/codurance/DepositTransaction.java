@@ -1,8 +1,5 @@
 package com.codurance;
 
-/**
- * Created by tobyretallick on 24/09/2014.
- */
 public class DepositTransaction implements Transaction {
     private TransactionDate transactionDate;
     private Money money;

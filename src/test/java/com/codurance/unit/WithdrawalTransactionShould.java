@@ -8,22 +8,20 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import static java.time.LocalDate.now;
 import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class WithdrawalTransactionShould {
     private static final Money £10 = new Money(10);
     private static final TransactionDate DATE = new TransactionDate(now());
-    @Mock Money mockedAmount;
     private Transaction withdrawalTransaction;
-    private StatementPrinter statementPrinter;
+    @Mock Money mockedAmount;
+    @Mock StatementPrinter statementPrinter;
 
     @Test
     public void
     pass_transaction_information_to_statementPrinter() {
         withdrawalTransaction = new WithdrawalTransaction(£10, DATE);
-        statementPrinter = mock(StatementPrinter.class);
         withdrawalTransaction.print(statementPrinter);
         verify(statementPrinter).printStatementLine(any(), any());
     }
