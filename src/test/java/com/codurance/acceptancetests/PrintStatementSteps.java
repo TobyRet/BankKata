@@ -1,15 +1,15 @@
 package com.codurance.acceptancetests;
 
-import com.codurance.BankService;
-import com.codurance.Money;
-import com.codurance.TransactionDate;
+import com.codurance.*;
 import cucumber.api.DataTable;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 
 /**
  * Created by tobyretallick on 23/09/2014.
@@ -20,31 +20,36 @@ public class PrintStatementSteps {
 
     @Before
     public void initialise() {
-        bankService = new BankService(null, null);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        TransactionsRepository transactionRepository = new TransactionsRepository();
+        Console console = new Console();
+        StatementPrinter statementPrinter = new StatementPrinter(console);
+        bankService = new BankService(transactionRepository, statementPrinter);
     }
 
     @Given("^a client makes a deposit of (\\d+) on \"(.*?)\"$")
-    public void a_client_makes_a_deposit_of_on(int amount, TransactionDate date) throws Throwable {
+    public void a_client_makes_a_deposit_of_on(int amount, String transactionDate) throws Throwable {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate localDate = LocalDate.parse(transactionDate, formatter);
         Money money = new Money(amount);
-        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        //String date = sdf.parse(dateString);
+        TransactionDate date = new TransactionDate(localDate);
         bankService.deposit(money, date);
     }
 
     @Given("^a deposit of (\\d+) on \"(.*?)\"$")
-    public void a_deposit_of_on(int amount, TransactionDate date) throws Throwable {
+    public void a_deposit_of_on(int amount, String transactionDate) throws Throwable {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate localDate = LocalDate.parse(transactionDate, formatter);
         Money money = new Money(amount);
-        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        //Date date = sdf.parse(dateString);
+        TransactionDate date = new TransactionDate(localDate);
         bankService.deposit(money, date);
     }
 
     @Given("^a withdrawal of (\\d+) on \"(.*?)\"$")
-    public void a_withdrawal_of_on(int amount, TransactionDate date) throws Throwable {
+    public void a_withdrawal_of_on(int amount, String transactionDate) throws Throwable {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate localDate = LocalDate.parse(transactionDate, formatter);
         Money money = new Money(amount);
-        //SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        //Date date = sdf.parse(dateString);
+        TransactionDate date = new TransactionDate(localDate);
         bankService.withdraw(money, date);
     }
 
@@ -55,11 +60,7 @@ public class PrintStatementSteps {
 
     @Then("^she would see$")
     public void she_would_see(DataTable statement) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-        // E,K,V must be a scalar (String, Integer, Date, enum etc)
-        System.out.print(statement);
+        //assertThat(bankService.printStatement(), contains(statement.asList(String.class)));
     }
 
 }

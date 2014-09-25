@@ -31,14 +31,14 @@ public class BankingServiceShould {
     should_deposit_funds() {
         depositTransaction = mock(DepositTransaction.class);
         bankService.deposit(DEPOSIT_£20, TRANSACTION_DATE);
-        verify(transactionsRepository).store(any());
+        verify(transactionsRepository).store(any(DepositTransaction.class));
     }
 
     @Test public void
     should_withdraw_funds() {
         withdrawalTransaction = mock(WithdrawalTransaction.class);
         bankService.withdraw(WITHDRAW_£10, TRANSACTION_DATE);
-        verify(transactionsRepository).store(any());
+        verify(transactionsRepository).store(any(WithdrawalTransaction.class));
     }
 
     @Test public void
